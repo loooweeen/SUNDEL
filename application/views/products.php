@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table id="sample-table-2" class="table table-striped table-bordered table-hover">
+                            <table id="product-table" class="table table-striped table-bordered table-hover datalamesa">
                                 <thead>
                                     <tr>
                                         <th class="center">
@@ -78,7 +78,9 @@
                                                 </label>
                                             </td>
 
-                                            <td><?php echo $product->name; ?></td>
+                                            <td class="hidden-480">
+                                                <a href="<?php echo base_url();?>products/details/<?php echo $product->productID?>"><?php echo $product->name; ?>
+                                            </td>
                                             <td><?php echo $product->size; ?></td>
                                             <td><?php echo $product->description; ?></td>
                                             <td><?php echo $product->categoryID; ?></td>

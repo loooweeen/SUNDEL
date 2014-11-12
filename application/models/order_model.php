@@ -14,9 +14,14 @@ class Order_model extends CI_Model {
         return $query->result();
     }
 
-    function order($trasactionID) {
-        $query = $this->db->query("SELECT * FROM transaction WHERE trasactionID = $trasactionID");
+    function transaction($transactionID) {
+        $query = $this->db->query("SELECT * FROM `transaction` WHERE transactionID = $transactionID");
         return $query->row();
+    }
+
+    function order($trasactionID) {
+        $query = $this->db->query("SELECT * FROM `order` WHERE transactionID = $trasactionID");
+        return $query->result();
     }
 
 }

@@ -15,7 +15,12 @@ class Product_model extends CI_Model {
     }
 
     function product($productID) {
-        $query = $this->db->query("SELECT * FROM products WHERE productID = $productID");
+        $query = $this->db->query("SELECT * FROM `products` WHERE productID = $productID");
+        return $query->row();
+    }
+
+    function order_product($priceID) {
+        $query = $this->db->query("SELECT * FROM `order` JOIN `prices` ON `prices`.`priceID` = `order`.`priceID` JOIN `products` ON `products`.`productID` = `prices`.`productID` WHERE `order`.`priceID` = $priceID");
         return $query->row();
     }
 

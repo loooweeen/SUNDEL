@@ -113,13 +113,26 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
 <script type="text/javascript">
     jQuery(function($) {
 
-        var oTable1 = $('#sample-table-2').dataTable({
+        var orderTable = $('#order-table').dataTable({
             "aoColumns": [
                 {"bSortable": false},
                 null, null, null, null, null,
                 {"bSortable": false}
             ]});
 
+        var productTable = $('#product-table').dataTable({
+            "aoColumns": [
+                {"bSortable": false},
+                null, null, null, null,
+                {"bSortable": false}
+            ]});
+
+        var clientTable = $('#client-table').dataTable({
+            "aoColumns": [
+                {"bSortable": false},
+                null, null, null, null,
+                {"bSortable": false}
+            ]});
 
         $('table th input:checkbox').on('click', function() {
             var that = this;

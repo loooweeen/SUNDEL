@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table id="sample-table-2" class="table table-striped table-bordered table-hover">
+                            <table id="client-table" class="table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th class="center">

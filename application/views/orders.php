@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table id="sample-table-2" class="table table-striped table-bordered table-hover">
+                            <table id="order-table" class="table table-striped table-bordered table-hover datalamesa">
                                 <thead>
                                     <tr>
                                         <th class="center">
@@ -82,7 +82,7 @@
                                             </td>
 
                                             <td class="hidden-480">
-                                                <a href="<?php echo base_url(); ?>clients/profile/<?php echo $order->clientID; ?>"><?php echo $order->date; ?></a>
+                                                <a href="<?php echo base_url(); ?>orders/purchase/<?php echo $order->clientID; ?>"><?php echo $order->date; ?></a>
                                             </td>
                                             <td><?php echo $this->Client_model->client($order->clientID)->nickname; ?></td>
                                             <td><?php echo $this->Client_model->client($order->clientID)->company; ?></td>

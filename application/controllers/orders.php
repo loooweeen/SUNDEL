@@ -33,7 +33,8 @@ class Orders extends CI_Controller {
         $data['name'] = $this->Employee_model->employee($userID)->firstname;
         $data['image'] = $this->Employee_model->employee($userID)->image;
 
-
+        $data['transaction'] = $this->Order_model->transaction($transactionID);
+        $data['orders'] = $this->Order_model->order($transactionID);
         $this->load->view('header', $data);
         $this->load->view('orders_purchase', $data);
         $this->load->view('footer');
