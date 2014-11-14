@@ -41,6 +41,12 @@
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
 
+                <p>
+                    <a href="<?php echo base_url().'orders/compose'?>" class="btn">
+                        <i class="icon-pencil align-top bigger-125"></i>
+                        New Order
+                    </a>
+                </p>
                 <div class="row">
                     <div class="col-xs-12">
 

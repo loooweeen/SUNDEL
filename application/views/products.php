@@ -79,11 +79,11 @@
                                             </td>
 
                                             <td class="hidden-480">
-                                                <a href="<?php echo base_url();?>products/details/<?php echo $product->productID?>"><?php echo $product->name; ?>
+                                                <a href="<?php echo base_url(); ?>products/details/<?php echo $product->productID ?>"><?php echo $product->name; ?>
                                             </td>
                                             <td><?php echo $product->size; ?></td>
                                             <td><?php echo $product->description; ?></td>
-                                            <td><?php echo $product->categoryID; ?></td>
+                                            <td><?php echo $product->category; ?></td>
 
                                             <td class="hidden-480">
                                                 <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">

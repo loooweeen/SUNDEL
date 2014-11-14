@@ -40,6 +40,21 @@ class Orders extends CI_Controller {
         $this->load->view('footer');
     }
 
+    function compose() {
+        $userID = $this->session->userdata('userid');
+        if (empty($userID)) {
+            $this->session->set_flashdata('session_error', TRUE);
+            redirect(base_url());
+        }
+
+        $data['name'] = $this->Employee_model->employee($userID)->firstname;
+        $data['image'] = $this->Employee_model->employee($userID)->image;
+
+        $this->load->view('header', $data);
+        $this->load->view('orders_compose', $data);
+        $this->load->view('footer');
+    }
+
 }
 
 ?>

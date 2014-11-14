@@ -10,7 +10,7 @@ class Product_model extends CI_Model {
 
 //Product
     function product_list() {
-        $query = $this->db->query("SELECT * FROM products");
+        $query = $this->db->query("SELECT * FROM products JOIN `product_category` ON `product_category`.`categoryID` = `products`.`categoryID`");
         return $query->result();
     }
 

@@ -14,7 +14,7 @@
             </li>
 
             <li>
-                <a href="#">More Pages</a>
+                <a href="<?php echo base_url(). 'orders';?>">Orders</a>
             </li>
             <li class="active">Invoice</li>
         </ul><!-- .breadcrumb -->
