@@ -99,6 +99,13 @@
                                         Pictures
                                     </a>
                                 </li>
+                                
+                                <li>
+                                    <a data-toggle="tab" href="#purchased">
+                                        <i class="pink icon-picture bigger-120"></i>
+                                        Purchased
+                                    </a>
+                                </li>
                             </ul>
 
                             <div class="tab-content no-border padding-24">
