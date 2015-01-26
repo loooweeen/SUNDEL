@@ -14,7 +14,7 @@
             </li>
 
             <li>
-                <a href="<?php echo base_url(). 'orders';?>">Orders</a>
+                <a href="<?php echo base_url() . 'orders'; ?>">Orders</a>
             </li>
             <li class="active">New Order</li>
         </ul><!-- .breadcrumb -->
@@ -99,73 +99,7 @@
                                         <div class="step-pane active" id="step1">
                                             <h3 class="lighter block green">Enter the following information</h3>
 
-                                            <form class="form-horizontal" id="sample-form">
-                                                <div class="form-group has-warning">
-                                                    <label for="inputWarning" class="col-xs-12 col-sm-3 control-label no-padding-right">Input with warning</label>
-
-                                                    <div class="col-xs-12 col-sm-5">
-                                                        <span class="block input-icon input-icon-right">
-                                                            <input type="text" id="inputWarning" class="width-100" />
-                                                            <i class="icon-leaf"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline">
-                                                        Warning tip help!
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group has-error">
-                                                    <label for="inputError" class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right">Input with error</label>
-
-                                                    <div class="col-xs-12 col-sm-5">
-                                                        <span class="block input-icon input-icon-right">
-                                                            <input type="text" id="inputError" class="width-100" />
-                                                            <i class="icon-remove-sign"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Error tip help! </div>
-                                                </div>
-
-                                                <div class="form-group has-success">
-                                                    <label for="inputSuccess" class="col-xs-12 col-sm-3 control-label no-padding-right">Input with success</label>
-
-                                                    <div class="col-xs-12 col-sm-5">
-                                                        <span class="block input-icon input-icon-right">
-                                                            <input type="text" id="inputSuccess" class="width-100" />
-                                                            <i class="icon-ok-sign"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline">
-                                                        Success tip help!
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group has-info">
-                                                    <label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">Input with info</label>
-
-                                                    <div class="col-xs-12 col-sm-5">
-                                                        <span class="block input-icon input-icon-right">
-                                                            <input type="text" id="inputInfo" class="width-100" />
-                                                            <i class="icon-info-sign"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Info tip help! </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="inputError2" class="col-xs-12 col-sm-3 control-label no-padding-right">Input with error</label>
-
-                                                    <div class="col-xs-12 col-sm-5">
-                                                        <span class="input-icon block">
-                                                            <input type="text" id="inputError2" class="width-100" />
-                                                            <i class="icon-remove-sign red"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Error tip help! </div>
-                                                </div>
-                                            </form>
-
-                                            <form class="form-horizontal hide" id="validation-form" method="get">
+                                            <form class="form-horizontal" id="validation-form" method="get">
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right" for="email">Email Address:</label>
 
