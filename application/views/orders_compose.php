@@ -31,10 +31,10 @@
     <div class="page-content">
         <div class="page-header">
             <h1>
-                Form Wizard
+                New Order
                 <small>
                     <i class="icon-double-angle-right"></i>
-                    and Validation
+                    Purchase Order
                 </small>
             </h1>
         </div><!-- /.page-header -->
@@ -42,13 +42,6 @@
         <div class="row">
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
-
-                <h4 class="lighter">
-                    <i class="icon-hand-right icon-animated-hand-pointer blue"></i>
-                    <a href="#modal-wizard" data-toggle="modal" class="pink"> Wizard Inside a Modal Box </a>
-                </h4>
-
-                <div class="hr hr-18 hr-double dotted"></div>
 
                 <div class="row-fluid">
                     <div class="span12">
@@ -62,7 +55,7 @@
                                             <b>Validation</b>
                                         </small>
 
-                                        <input id="skip-validation" type="checkbox" class="ace ace-switch ace-switch-4" />
+                                        <input id="skip-validation" type="checkbox" class="ace ace-switch ace-switch-4" checked=""/>
                                         <span class="lbl"></span>
                                     </label>
                                 </div>

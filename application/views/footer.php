@@ -147,7 +147,7 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
         });
 
 
-        $('#skip-validation').removeAttr('checked').on('click', function() {
+        $('#skip-validation').on('click', function() {
             $validation = this.checked;
             if (this.checked) {
                 $('#validation-form').removeClass('hide');
