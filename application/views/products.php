@@ -40,6 +40,13 @@
         <div class="row">
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
+                
+                <p>
+                    <a href="<?php echo base_url().'products/NewProduct'?>" class="btn">
+                        <i class="icon-pencil align-top bigger-125"></i>
+                        New Product
+                    </a>
+                </p>
 
                 <div class="row">
                     <div class="col-xs-12">
