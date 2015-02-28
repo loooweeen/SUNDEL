@@ -32,6 +32,7 @@ class Products extends CI_Controller {
 
         $data['name'] = $this->Employee_model->employee($userID)->firstname;
         $data['image'] = $this->Employee_model->employee($userID)->image;
+        $data['categories'] = $this->Product_model->category_list();
 
         $this->load->view('header', $data);
         $this->load->view('products_new', $data);

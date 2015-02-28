@@ -472,7 +472,9 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- PAGE CONTENT ENDS -->
+                </div>
+                
+                <!-- PAGE CONTENT ENDS -->
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.page-content -->

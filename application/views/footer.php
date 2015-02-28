@@ -105,6 +105,7 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
 <script src="<?php echo base_url(); ?>assets/js/fuelux/fuelux.wizard.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validate.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/additional-methods.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/chosen.jquery.min.js"></script>
 
 <!-- ace scripts -->
 
@@ -117,6 +118,8 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
     jQuery(function($) {
 
         //start of inline scripts
+        
+        
 
         $('[data-rel=tooltip]').tooltip();
 
@@ -157,7 +160,7 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
             }
         });
 
-
+        $(".chosen-select").chosen();
 
         //documentation : http://docs.jquery.com/Plugins/Validation/validate
 
@@ -274,7 +277,7 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
         var productTable = $('#product-table').dataTable({
             "aoColumns": [
                 {"bSortable": false},
-                null, null, null, null,
+                null, null, null,
                 {"bSortable": false}
             ]});
 

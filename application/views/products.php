@@ -66,9 +66,8 @@
                                             </label>
                                         </th>
 
-                                        <th>Product</th>
-                                        <th>Size</th>
-                                        <th>Description</th>
+                                        <th>Product Code</th>
+                                        <th>Product Name</th>
                                         <th>Category</th>
 
                                         <th class="hidden-480"></th>
@@ -86,10 +85,9 @@
                                             </td>
 
                                             <td class="hidden-480">
-                                                <a href="<?php echo base_url(); ?>products/details/<?php echo $product->productID ?>"><?php echo $product->name; ?>
+                                                <a href="<?php echo base_url(); ?>products/details/<?php echo $product->productID ?>"><?php echo $product->code; ?>
                                             </td>
-                                            <td><?php echo $product->size; ?></td>
-                                            <td><?php echo $product->description; ?></td>
+                                            <td><?php echo $product->name; ?></td>
                                             <td><?php echo $product->category; ?></td>
 
                                             <td class="hidden-480">

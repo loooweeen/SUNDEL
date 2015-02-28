@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ace.min.css" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ace-rtl.min.css" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ace-skins.min.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/chosen.css" />
 
         <!--[if lte IE 8]>
           <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ace-ie.min.css" />

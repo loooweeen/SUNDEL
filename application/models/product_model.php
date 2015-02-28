@@ -10,7 +10,7 @@ class Product_model extends CI_Model {
 
 //Product
     function product_list() {
-        $query = $this->db->query("SELECT * FROM products JOIN `product_category` ON `product_category`.`categoryID` = `products`.`categoryID`");
+        $query = $this->db->query("SELECT * FROM products JOIN `ref_category` ON `ref_category`.`categoryID` = `products`.`categoryID`");
         return $query->result();
     }
 
@@ -22,6 +22,11 @@ class Product_model extends CI_Model {
     function order_product($priceID) {
         $query = $this->db->query("SELECT * FROM `order` JOIN `prices` ON `prices`.`priceID` = `order`.`priceID` JOIN `products` ON `products`.`productID` = `prices`.`productID` WHERE `order`.`priceID` = $priceID");
         return $query->row();
+    }
+
+    function category_list() {
+        $query = $this->db->query("SELECT * FROM `ref_category`");
+        return $query->result();
     }
 
 }
