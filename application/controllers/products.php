@@ -39,6 +39,31 @@ class Products extends CI_Controller {
         $this->load->view('footer');
     }
 
+    public function product_insert() {
+        $userID = $this->session->userdata('userid');
+        if (empty($userID)) {
+            $this->session->set_flashdata('session_error', TRUE);
+            redirect(base_url());
+        }
+
+        $data['name'] = $this->Employee_model->employee($userID)->firstname;
+        $data['image'] = $this->Employee_model->employee($userID)->image;
+
+        $product_name = $this->input->post('productName');
+        $product_code = $this->input->post('productCode');
+        $product_category = $this->input->post('productCategory');
+
+        $product = array(
+            'categoryID' => $product_category,
+            'code' => $product_code,
+            'name' => $product_name
+        );
+        $this->Product_model->insert_product($product);
+
+        echo 'prodcut name is... ' . $product_name;
+//redirect(base_url() . 'products');
+    }
+
 }
 
 ?>

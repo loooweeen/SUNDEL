@@ -29,6 +29,10 @@ class Product_model extends CI_Model {
         return $query->result();
     }
 
+    function insert_product($data) {
+        $this->db->insert('products', $data);
+    }
+
 }
 
 ?>

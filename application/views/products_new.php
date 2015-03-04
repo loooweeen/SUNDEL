@@ -43,14 +43,14 @@
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
 
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form" action="<?php echo base_url(); ?>products/product_insert" method="POST">
 
                     <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-5">Product Name and Description</label>
 
                         <div class="col-sm-9">
                             <div class="clearfix">
-                                <input class="col-xs-5" type="text" id="productName" placeholder="Example: Hard Copy Short Substance 20" />
+                                <input class="col-xs-5" type="text" name="productName" placeholder="Example: Hard Copy Short Substance 20" />
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-4">Product Code</label>
 
                         <div class="col-sm-9">
-                            <input class="input-medium" type="text" id="form-field-4" placeholder="HDCPY-SB20-S " />
+                            <input class="input-medium" type="text" name="productCode" placeholder="HDCPY-SB20-S " />
 
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-3">Category</label>
 
                         <div class="col-sm-9">
-                            <select class="width-80 chosen-select" id="form-field-select-3" data-placeholder="Choose a Category...">
+                            <select class="width-80 chosen-select" name="productCategory" data-placeholder="Choose a Category...">
                                 <option value="0">Not Specified</option>
                                 <?php foreach ($categories as $c) : ?>
                                     <option value="<?php echo $c->categoryID; ?>"><?php echo $c->category ?></option>
