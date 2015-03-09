@@ -40,9 +40,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
-                
+
                 <p>
-                    <a href="<?php echo base_url().'products/NewProduct'?>" class="btn">
+                    <a href="<?php echo base_url() . 'products/NewProduct' ?>" class="btn">
                         <i class="icon-pencil align-top bigger-125"></i>
                         New Product
                     </a>
@@ -84,10 +84,8 @@
                                                 </label>
                                             </td>
 
-                                            <td class="hidden-480">
-                                                <a href="<?php echo base_url(); ?>products/details/<?php echo $product->productID ?>"><?php echo $product->code; ?>
-                                            </td>
-                                            <td><?php echo $product->name; ?></td>
+                                            <td class="hidden-480"><?php echo $product->code; ?></td>
+                                            <td><a href="<?php echo base_url(); ?>products/details/<?php echo $product->productID ?>"><?php echo $product->name; ?></a></td>
                                             <td><?php echo $product->category; ?></td>
 
                                             <td class="hidden-480">

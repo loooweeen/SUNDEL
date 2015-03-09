@@ -14,7 +14,7 @@
             </li>
 
             <li>
-                <a href="<?php echo base_url(). 'orders';?>">Orders</a>
+                <a href="<?php echo base_url() . 'orders'; ?>">Orders</a>
             </li>
             <li class="active">Invoice</li>
         </ul><!-- .breadcrumb -->
@@ -163,7 +163,7 @@
                                                             <?php echo $this->Product_model->order_product($order->priceID)->unit; ?>
                                                         </td>
                                                         <td class="hidden-xs">
-                                                            <a href="#"><?php echo $this->Product_model->order_product($order->priceID)->name . $this->Product_model->order_product($order->priceID)->description . $this->Product_model->order_product($order->priceID)->size; ?></a>
+                                                            <a href="#"><?php echo $this->Product_model->order_product($order->priceID)->name; ?></a>
                                                         </td>
                                                         <td class="hidden-480"> --- </td>
                                                         <td>₱<?php echo $this->Product_model->order_product($order->priceID)->price; ?></td>
