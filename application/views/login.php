@@ -74,7 +74,7 @@
                                                 <fieldset>
                                                     <label class="block clearfix">
                                                         <span class="block input-icon input-icon-right">
-                                                            <input name="username" type="text" class="form-control" placeholder="Username" />
+                                                            <input name="username" type="text" class="form-control" placeholder="Username" focus=""/>
                                                             <i class="icon-user"></i>
                                                         </span>
                                                     </label>

@@ -53,6 +53,8 @@
 </div><!-- /.main-container -->
 
 
+
+
 <!-- basic scripts -->
 
 <!--[if !IE]> -->
@@ -73,8 +75,8 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
     if ("ontouchend" in document)
         document.write("<script src='<?php echo base_url(); ?>assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 </script>
-<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/typeahead-bs2.min.js"></script>
+
+
 
 <!-- page specific plugin scripts -->
 
@@ -82,60 +84,76 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
   <script src="<?php echo base_url(); ?>assets/js/excanvas.min.js"></script>
 <![endif]-->
 
-<script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.ui.touch-punch.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.gritter.min.js"></script>
+<!-- ace scripts -->
+<script src="<?php echo base_url(); ?>assets/js/ace-elements.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/ace.min.js"></script>
+<!-- ace scripts -->
+
+<script src="<?php echo base_url(); ?>assets/js/additional-methods.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootbox.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.slimscroll.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.easy-pie-chart.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.hotkeys.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrap-wysiwyg.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap-tag.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/chosen.jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/select2.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/typeahead-bs2.min.js"></script>
+
 <script src="<?php echo base_url(); ?>assets/js/date-time/bootstrap-datepicker.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/fuelux/fuelux.spinner.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/x-editable/bootstrap-editable.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/x-editable/ace-editable.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.maskedinput.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.sparkline.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/date-time/moment.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/date-time/daterangepicker.min.js"></script>
+
 <script src="<?php echo base_url(); ?>assets/js/flot/jquery.flot.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/flot/jquery.flot.pie.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/flot/jquery.flot.resize.min.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/js/fuelux/fuelux.spinner.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/fuelux/fuelux.wizard.min.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/js/x-editable/bootstrap-editable.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/x-editable/ace-editable.min.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.knob.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.gritter.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.slimscroll.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.easy-pie-chart.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.hotkeys.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.maskedinput.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.sparkline.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.bootstrap.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/fuelux/fuelux.wizard.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validate.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/additional-methods.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/chosen.jquery.min.js"></script>
 
-<!-- ace scripts -->
 
-<script src="<?php echo base_url(); ?>assets/js/ace-elements.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/ace.min.js"></script>
 
 <!-- inline scripts related to this page -->
 
 <script type="text/javascript">
-    jQuery(function($) {
+    jQuery(function ($) {
 
         //start of inline scripts
-        
-        
 
+        //START
         $('[data-rel=tooltip]').tooltip();
+        //END
 
+
+        //START
         $(".select2").css('width', '200px').select2({allowClear: true})
-                .on('change', function() {
+                .on('change', function () {
                     $(this).closest('form').validate().element($(this));
                 });
+        //END
 
-
+        //START
         var $validation = false;
-        $('#fuelux-wizard').ace_wizard().on('change', function(e, info) {
+        $('#fuelux-wizard').ace_wizard().on('change', function (e, info) {
             if (info.step == 1 && $validation) {
                 if (!$('#validation-form').valid())
                     return false;
             }
-        }).on('finished', function(e) {
+        }).on('finished', function (e) {
             bootbox.dialog({
                 message: "Thank you! Your information was successfully saved!",
                 buttons: {
@@ -145,12 +163,13 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
                     }
                 }
             });
-        }).on('stepclick', function(e) {
+        }).on('stepclick', function (e) {
             //return false;//prevent clicking on steps
         });
+        //END
 
-
-        $('#skip-validation').on('click', function() {
+        //START
+        $('#skip-validation').on('click', function () {
             $validation = this.checked;
             if (this.checked) {
                 $('#validation-form').removeClass('hide');
@@ -159,18 +178,15 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
                 $('#validation-form').addClass('hide');
             }
         });
+        //END
 
+        //START
         $(".chosen-select").chosen();
+        //END
 
         //documentation : http://docs.jquery.com/Plugins/Validation/validate
 
-
-        $.mask.definitions['~'] = '[+-]';
-        $('#phone').mask('(999) 999-9999');
-
-        jQuery.validator.addMethod("phone", function(value, element) {
-            return this.optional(element) || /^\(\d{3}\) \d{3}\-\d{4}( x\d{1,6})?$/.test(value);
-        }, "Enter a valid phone number.");
+        //START
 
         $('#validation-form').validate({
             errorElement: 'div',
@@ -229,17 +245,17 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
                 gender: "Please choose gender",
                 agree: "Please accept our policy"
             },
-            invalidHandler: function(event, validator) { //display error alert on form submit   
+            invalidHandler: function (event, validator) { //display error alert on form submit   
                 $('.alert-danger', $('.login-form')).show();
             },
-            highlight: function(e) {
+            highlight: function (e) {
                 $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
             },
-            success: function(e) {
+            success: function (e) {
                 $(e).closest('.form-group').removeClass('has-error').addClass('has-info');
                 $(e).remove();
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 if (element.is(':checkbox') || element.is(':radio')) {
                     var controls = element.closest('div[class*="col-"]');
                     if (controls.find(':checkbox,:radio').length > 1)
@@ -256,17 +272,55 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
                 else
                     error.insertAfter(element.parent());
             },
-            submitHandler: function(form) {
+            submitHandler: function (form) {
             },
-            invalidHandler: function(form) {
+            invalidHandler: function (form) {
             }
         });
 
-        $('#modal-wizard .modal-header').ace_wizard();
-        $('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
+        //END
 
+        //START
+
+        //we could just set the data-provide="tag" of the element inside HTML, but IE8 fails!
+        var tag_input = $('#form-field-tags');
+        if (!(/msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase())))
+        {
+                categ = new Array();
+                <?php 
+                    $vars = $this->Category_model->category_list();
+                ?>
+
+                <?php foreach($vars as $v) : ?>
+                    categ.push("<?php echo $v->category; ?>");
+                <?php endforeach; ?>
+            tag_input.tag(
+                    {
+                        placeholder: tag_input.attr('placeholder'),
+                        //enable typeahead by specifying the source array
+                        source: categ,//ace.variable_US_STATES, //defined in ace.js >> ace.enable_search_ahead
+                        
+                    }
+            );
+        }
+        else {
+            //display a textarea for old IE, because it doesn't support this plugin or another one I tried!
+            tag_input.after('<textarea id="' + tag_input.attr('id') + '" name="' + tag_input.attr('name') + '" rows="3">' + tag_input.val() + '</textarea>').remove();
+            //$('#form-field-tags').autosize({append: "\n"});
+        }
+
+        //END
+
+
+        //START
+        //$('#modal-wizard .modal-header').ace_wizard();
+        //$('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
+        //END
+        
         //end of form wizard inline script
 
+
+        //START
         var orderTable = $('#order-table').dataTable({
             "aoColumns": [
                 {"bSortable": false},
@@ -287,221 +341,223 @@ window.jQuery || document.write("<script src='<?php echo base_url(); ?>assets/js
                 null, null, null, null,
                 {"bSortable": false}
             ]});
-
-        $('table th input:checkbox').on('click', function() {
-            var that = this;
-            $(this).closest('table').find('tr > td:first-child input:checkbox')
-                    .each(function() {
-                        this.checked = that.checked;
-                        $(this).closest('tr').toggleClass('selected');
-                        console.log('click');
-                    });
-
-        });
-
-
-        $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
-        function tooltip_placement(context, source) {
-            var $source = $(source);
-            var $parent = $source.closest('table')
-            var off1 = $parent.offset();
-            var w1 = $parent.width();
-
-            var off2 = $source.offset();
-            var w2 = $source.width();
-
-            console.log('click');
-
-            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2))
-                return 'right';
-            return 'left';
-        }
-
-        $('.easy-pie-chart.percentage').each(function() {
-            var $box = $(this).closest('.infobox');
-            var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
-            var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
-            var size = parseInt($(this).data('size')) || 50;
-            $(this).easyPieChart({
-                barColor: barColor,
-                trackColor: trackColor,
-                scaleColor: false,
-                lineCap: 'butt',
-                lineWidth: parseInt(size / 10),
-                animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
-                size: size
-            });
-        })
-
-        $('.sparkline').each(function() {
-            var $box = $(this).closest('.infobox');
-            var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
-            $(this).sparkline('html', {tagValuesAttribute: 'data-values', type: 'bar', barColor: barColor, chartRangeMin: $(this).data('min') || 0});
-        });
-
-        var placeholder = $('#piechart-placeholder').css({'width': '90%', 'min-height': '150px'});
-        var data = [
-            {label: "social networks", data: 38.7, color: "#68BC31"},
-            {label: "search engines", data: 24.5, color: "#2091CF"},
-            {label: "ad campaigns", data: 8.2, color: "#AF4E96"},
-            {label: "direct traffic", data: 18.6, color: "#DA5430"},
-            {label: "other", data: 10, color: "#FEE074"}
-        ]
-        function drawPieChart(placeholder, data, position) {
-            $.plot(placeholder, data, {
-                series: {
-                    pie: {
-                        show: true,
-                        tilt: 0.8,
-                        highlight: {
-                            opacity: 0.25
-                        },
-                        stroke: {
-                            color: '#fff',
-                            width: 2
-                        },
-                        startAngle: 2
-                    }
-                },
-                legend: {
-                    show: true,
-                    position: position || "ne",
-                    labelBoxBorderColor: null,
-                    margin: [-30, 15]
-                }
-                ,
-                grid: {
-                    hoverable: true,
-                    clickable: true
-                }
-            })
-        }
-        drawPieChart(placeholder, data);
-
-        /**
-         we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
-         so that's not needed actually.
-         */
-        placeholder.data('chart', data);
-        placeholder.data('draw', drawPieChart);
-
-
-
-        var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
-        var previousPoint = null;
-
-        placeholder.on('plothover', function(event, pos, item) {
-            if (item) {
-                if (previousPoint != item.seriesIndex) {
-                    previousPoint = item.seriesIndex;
-                    var tip = item.series['label'] + " : " + item.series['percent'] + '%';
-                    $tooltip.show().children(0).text(tip);
-                }
-                $tooltip.css({top: pos.pageY + 10, left: pos.pageX + 10});
-            } else {
-                $tooltip.hide();
-                previousPoint = null;
-            }
-
-        });
-
-        var d1 = [];
-        for (var i = 0; i < Math.PI * 2; i += 0.5) {
-            d1.push([i, Math.sin(i)]);
-        }
-
-        var d2 = [];
-        for (var i = 0; i < Math.PI * 2; i += 0.5) {
-            d2.push([i, Math.cos(i)]);
-        }
-
-        var d3 = [];
-        for (var i = 0; i < Math.PI * 2; i += 0.2) {
-            d3.push([i, Math.tan(i)]);
-        }
-
-        var sales_charts = $('#sales-charts').css({'width': '100%', 'height': '220px'});
-        $.plot("#sales-charts", [
-            {label: "Domains", data: d1},
-            {label: "Hosting", data: d2},
-            {label: "Services", data: d3}
-        ], {
-            hoverable: true,
-            shadowSize: 0,
-            series: {
-                lines: {show: true},
-                points: {show: true}
-            },
-            xaxis: {
-                tickLength: 0
-            },
-            yaxis: {
-                ticks: 10,
-                min: -2,
-                max: 2,
-                tickDecimals: 3
-            },
-            grid: {
-                backgroundColor: {colors: ["#fff", "#fff"]},
-                borderWidth: 1,
-                borderColor: '#555'
-            }
-        });
-
-
-        $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
-        function tooltip_placement(context, source) {
-            var $source = $(source);
-            var $parent = $source.closest('.tab-content');
-            var off1 = $parent.offset();
-            var w1 = $parent.width();
-
-            var off2 = $source.offset();
-            var w2 = $source.width();
-
-            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2))
-                return 'right';
-            return 'left';
-        }
-
-
-        $('.dialogs,.comments').slimScroll({
-            height: '300px'
-        });
-
-
-        //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
-        //so disable dragging when clicking on label
-        var agent = navigator.userAgent.toLowerCase();
-        if ("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
-            $('#tasks').on('touchstart', function(e) {
-                var li = $(e.target).closest('#tasks li');
-                if (li.length == 0)
-                    return;
-                var label = li.find('label.inline').get(0);
-                if (label == e.target || $.contains(label, e.target))
-                    e.stopImmediatePropagation();
-            });
-
-        $('#tasks').sortable({
-            opacity: 0.8,
-            revert: true,
-            forceHelperSize: true,
-            placeholder: 'draggable-placeholder',
-            forcePlaceholderSize: true,
-            tolerance: 'pointer',
-            stop: function(event, ui) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
-                $(ui.item).css('z-index', 'auto');
-            }
-        }
-        );
-        $('#tasks').disableSelection();
-        $('#tasks input:checkbox').removeAttr('checked').on('click', function() {
-            if (this.checked)
-                $(this).closest('li').addClass('selected');
-            else
-                $(this).closest('li').removeClass('selected');
-        });
+        
+       //END
+//        
+//        $('table th input:checkbox').on('click', function() {
+//            var that = this;
+//            $(this).closest('table').find('tr > td:first-child input:checkbox')
+//                    .each(function() {
+//                        this.checked = that.checked;
+//                        $(this).closest('tr').toggleClass('selected');
+//                        console.log('click');
+//                    });
+//
+//        });
+//
+//
+//        $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+//        function tooltip_placement(context, source) {
+//            var $source = $(source);
+//            var $parent = $source.closest('table')
+//            var off1 = $parent.offset();
+//            var w1 = $parent.width();
+//
+//            var off2 = $source.offset();
+//            var w2 = $source.width();
+//
+//            console.log('click');
+//
+//            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2))
+//                return 'right';
+//            return 'left';
+//        }
+//
+//        $('.easy-pie-chart.percentage').each(function() {
+//            var $box = $(this).closest('.infobox');
+//            var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+//            var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+//            var size = parseInt($(this).data('size')) || 50;
+//            $(this).easyPieChart({
+//                barColor: barColor,
+//                trackColor: trackColor,
+//                scaleColor: false,
+//                lineCap: 'butt',
+//                lineWidth: parseInt(size / 10),
+//                animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+//                size: size
+//            });
+//        })
+//
+//        $('.sparkline').each(function() {
+//            var $box = $(this).closest('.infobox');
+//            var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+//            $(this).sparkline('html', {tagValuesAttribute: 'data-values', type: 'bar', barColor: barColor, chartRangeMin: $(this).data('min') || 0});
+//        });
+//
+//        var placeholder = $('#piechart-placeholder').css({'width': '90%', 'min-height': '150px'});
+//        var data = [
+//            {label: "social networks", data: 38.7, color: "#68BC31"},
+//            {label: "search engines", data: 24.5, color: "#2091CF"},
+//            {label: "ad campaigns", data: 8.2, color: "#AF4E96"},
+//            {label: "direct traffic", data: 18.6, color: "#DA5430"},
+//            {label: "other", data: 10, color: "#FEE074"}
+//        ]
+//        function drawPieChart(placeholder, data, position) {
+//            $.plot(placeholder, data, {
+//                series: {
+//                    pie: {
+//                        show: true,
+//                        tilt: 0.8,
+//                        highlight: {
+//                            opacity: 0.25
+//                        },
+//                        stroke: {
+//                            color: '#fff',
+//                            width: 2
+//                        },
+//                        startAngle: 2
+//                    }
+//                },
+//                legend: {
+//                    show: true,
+//                    position: position || "ne",
+//                    labelBoxBorderColor: null,
+//                    margin: [-30, 15]
+//                }
+//                ,
+//                grid: {
+//                    hoverable: true,
+//                    clickable: true
+//                }
+//            })
+//        }
+//        drawPieChart(placeholder, data);
+//
+//        /**
+//         we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+//         so that's not needed actually.
+//         */
+//        placeholder.data('chart', data);
+//        placeholder.data('draw', drawPieChart);
+//
+//
+//
+//        var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+//        var previousPoint = null;
+//
+//        placeholder.on('plothover', function(event, pos, item) {
+//            if (item) {
+//                if (previousPoint != item.seriesIndex) {
+//                    previousPoint = item.seriesIndex;
+//                    var tip = item.series['label'] + " : " + item.series['percent'] + '%';
+//                    $tooltip.show().children(0).text(tip);
+//                }
+//                $tooltip.css({top: pos.pageY + 10, left: pos.pageX + 10});
+//            } else {
+//                $tooltip.hide();
+//                previousPoint = null;
+//            }
+//
+//        });
+//
+//        var d1 = [];
+//        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+//            d1.push([i, Math.sin(i)]);
+//        }
+//
+//        var d2 = [];
+//        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+//            d2.push([i, Math.cos(i)]);
+//        }
+//
+//        var d3 = [];
+//        for (var i = 0; i < Math.PI * 2; i += 0.2) {
+//            d3.push([i, Math.tan(i)]);
+//        }
+//
+//        var sales_charts = $('#sales-charts').css({'width': '100%', 'height': '220px'});
+//        $.plot("#sales-charts", [
+//            {label: "Domains", data: d1},
+//            {label: "Hosting", data: d2},
+//            {label: "Services", data: d3}
+//        ], {
+//            hoverable: true,
+//            shadowSize: 0,
+//            series: {
+//                lines: {show: true},
+//                points: {show: true}
+//            },
+//            xaxis: {
+//                tickLength: 0
+//            },
+//            yaxis: {
+//                ticks: 10,
+//                min: -2,
+//                max: 2,
+//                tickDecimals: 3
+//            },
+//            grid: {
+//                backgroundColor: {colors: ["#fff", "#fff"]},
+//                borderWidth: 1,
+//                borderColor: '#555'
+//            }
+//        });
+//
+//
+//        $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+//        function tooltip_placement(context, source) {
+//            var $source = $(source);
+//            var $parent = $source.closest('.tab-content');
+//            var off1 = $parent.offset();
+//            var w1 = $parent.width();
+//
+//            var off2 = $source.offset();
+//            var w2 = $source.width();
+//
+//            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2))
+//                return 'right';
+//            return 'left';
+//        }
+//
+//
+//        $('.dialogs,.comments').slimScroll({
+//            height: '300px'
+//        });
+//
+//
+//        //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+//        //so disable dragging when clicking on label
+//        var agent = navigator.userAgent.toLowerCase();
+//        if ("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+//            $('#tasks').on('touchstart', function(e) {
+//                var li = $(e.target).closest('#tasks li');
+//                if (li.length == 0)
+//                    return;
+//                var label = li.find('label.inline').get(0);
+//                if (label == e.target || $.contains(label, e.target))
+//                    e.stopImmediatePropagation();
+//            });
+//
+//        $('#tasks').sortable({
+//            opacity: 0.8,
+//            revert: true,
+//            forceHelperSize: true,
+//            placeholder: 'draggable-placeholder',
+//            forcePlaceholderSize: true,
+//            tolerance: 'pointer',
+//            stop: function(event, ui) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+//                $(ui.item).css('z-index', 'auto');
+//            }
+//        }
+//        );
+//        $('#tasks').disableSelection();
+//        $('#tasks input:checkbox').removeAttr('checked').on('click', function() {
+//            if (this.checked)
+//                $(this).closest('li').addClass('selected');
+//            else
+//                $(this).closest('li').removeClass('selected');
+//        });
 
     })
 </script>
